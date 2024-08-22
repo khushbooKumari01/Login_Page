@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">WebDesign</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" name="" placeholder="Type to text">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Web Design & <br><span>Development</span><br>Course</h1>
+            <p class="par">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                <br>Animi cumque necessitatibus quod,
+                <br> ducimus amet debitis atque corrupti adipisci!
+                <br> Commodi sapiente esse aliquam veritatis exercitationem consequuntur est quasi.
+                <br> Officiis, sed cupiditate?
+            </p>
+            <button class="cn"><a href="#">Join Us</a></button>
+            <form name="myform" action="connet.php" method="post" onsubmit="return validateform()">
+            <div class="form">
+                <h2>Login Here</h2>
+                <input type="text" name="name"  placeholder="Name">
+                <input type="number" name="number" placeholder="Mobile Number">
+                <input type="email" name="email" placeholder="Email ID">
+                <input type="gender" name="gender" required placeholder="Gender">
+                <input type="text" name="college" placeholder="College Name">
+                <input type="text" name="state" placeholder="State">
+                <input type="text" name="city" placeholder="City">
+                <button class="btnn" type="submit" value="submit">submit</button>
+            
+        
+        </div>
+
+    </div>
+</form>
+    
+</body>
+<script>
+    function validateform(){
+        var name = document.myform.name.value;
+        var number = document.myform.number.value;
+        var email = document.myform.email.value;
+        var gender = document.myform.gender.value;
+        var college = document.myform.college.value;
+        var state = document.myform.state.value;
+        var city = document.myform.city.value;
+
+        if(name == null || name == "") {
+            alert("fisrt name can't be blank");
+            return false; 
+        }
+        else if(number == null || number == ""){
+        alert("Number can't be blank");
+        return false;
+        }
+
+        else if(email == null || email ==""){
+            alert("Email cannot be blank");
+            return false;
+        }
+        else if(college == null || college == ""){
+        alert("College name cannot be blank");
+        return false;
+        }
+        else if(state === null || state ==""){
+            alert("State cannot be blank");
+            return false;
+        }
+        else if(city == null || city == ""){
+            alert("City cannot be blank");
+            return false;
+        }
+    }
+
+</script>
+
+</html>
